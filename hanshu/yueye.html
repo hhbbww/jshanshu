@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		xing();
+		function xing(){
+			for(var a=1;a<=10;a++){
+			for(var c=1;c<=a;c++){
+				document.write('*')
+			}
+			document.write('<br>')
+			}
+		}
+		skt();
+		function skt(){
+			document.write('<table cellspacing=0 cellpadding=10>')
+			for(var i=1;i<=10;i++){
+				document.write('<tr>')
+				if(i%2==0){
+					document.write('<tr bgcolor=red>')
+				}else{
+					document.write('<tr bgcolor=green>')
+				}
+				for(var j=1;j<=i;j++){
+					document.write('<td>'+j+'*'+i+'='+i*j+'</td>')
+				}
+			}
+			document.write('</table>')
+		}
+		skt2();
+		function skt2(){
+			document.write('<table cellspacing=0 cellpadding=10 align=center>')
+			for(var i=1;i<=10;i++){
+				document.write('<tr algin=center>')
+				for(var j=1;j<=i;j++){
+					if (j%2==0) {
+						document.write('<td bgcolor=red>'+j+'*'+i+'='+i*j+'</td>')
+					}else{
+						document.write('<td bgcolor=green>'+j+'*'+i+'='+i*j+'</td>')
+					} 
+				}
+				document.write('</tr>')
+			}
+		document.write('</table>')
+		}
+		  skt3(11,11);
+		  function skt3(rows1,cols1){
+		  		var table ='<table>';
+			for(var i=1;i<=rows1;i++){
+			table += '<tr>'     
+			for(var j=1;j<=cols1;j++){
+				table +='<td>'+i+'-'+j+'</td>' 
+			}
+			table+='</tr>'
+			document.write('<br>');
+			}
+			document.write(table);
+		 } 
+
+		
+	
+		/*
+		         *			4
+		       * * *		3
+		     * * * * *		2
+		   * * * * * * *	1
+		 * * * * * * * * *	0
+		          
+		 */
+		/*var row=5
+		 for(var i=1;i<=row;i++){					
+		 	for(var j=1;j<=row-i;j++){	
+		 		document.write('-');
+		 	}
+		 	for(var j=1;j<=2*i-1;j++){
+		 		document.w=rite('*');
+		 	}
+		 	document.write('<br>');
+		 }*/
+		 
+		 /**/
+		/* for(var i=1;i<=5;i++){	
+		 	for(var j=1;j<=i;j++){	
+		 		document.write('-');
+		 	}				
+		 	for(var j=2*i-1;j<=9;j++){	
+		 		document.write('*');
+		 	}
+		 	document.write('<br>');
+		}*/
+		/*var arr=[1,95,75,11,66,55,88,17,18];
+		for(var i=0;i<arr.length;i++){
+			for(var j=i+1;j<arr.length;j++){
+				if(arr[i]<arr[j]){
+					var temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+		console.log(arr);*/
+		/*var i=1;
+		while(i<=10){
+			console.log(i);
+			i++;
+		}*/
+		// var sum=0;
+		// var i=1;
+		// while(i<=10){
+		// 	sum+=i;
+		// 	i++;
+		// }
+		// console.log(sum);
+		//do while 先执行 后判断
+		/*var sum = 0;
+		var i=1;
+		do{
+			sum+=i;
+			i++;
+		}while(i<=10);
+		console.log(sum)*/
+		// var arr=[1,2,,3,4,,5,6,7];
+		// var str=[];
+		// for(var i=0;i<arr.length;i++){
+		// 	if(arr[i]!=undefined){
+				
+		// 		str[str.length]=arr[i];
+		// 	}
+		// }
+		// console.log(str);
+		// var fn =function(){
+		// 	alert(1);
+		// }
+		// fn();  调用函数不能在函数之前。
+		// fn();
+		// function fn(){
+		// 	alert(1);
+		// }
+		//函数一样会被覆盖
+		fn(12,11);
+		function fn(rows,cols){
+			var table ='<table>';
+		for(var i=1;i<=rows;i++){
+			table += '<tr>'   
+			for(var j=1;j<=cols;j++){
+				table +='<td>'+i+'-'+j+'</td>' 	
+			}
+			table+='</tr>'					
+			document.write('<br>');
+		}
+		document.write(table)
+		}
+		fn(3);
+		function fn(rows){
+			var row=rows;
+		 for(var i=1;i<=row;i++){					
+		 	for(var j=1;j<=row-i;j++){	
+		 		document.write('-');
+		 	}
+		 	for(var j=1;j<=2*i-1;j++){
+		 		document.write('*');
+		 	}
+		 	document.write('<br>');
+		 }
+		}
+		skt5();
+		 function skt5(){
+		 	var i=0,j=1;
+		 	for(var k=0;k<=100;){
+		 	k=i+j;
+		 	document.write(k+'&nbsp');
+		 	i=j;
+		 	j=k;
+		 }
+		}
+	</script>
+</body>
+</html>
